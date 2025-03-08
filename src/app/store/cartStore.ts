@@ -22,7 +22,7 @@ type CartState = {
 // Create Zustand store with persistence
 export const useCartStore = create<CartState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       items: [],
       total: 0,
       addToCart: (product) => {
